@@ -1,0 +1,577 @@
+@charset "utf-8";
+
+/* reset */
+@import url(./reset.css);
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+img{
+    display: block;
+}
+
+
+/* 던파 비트비트체 v2 */
+@font-face{
+    font-family:'DNFBitBitv2';
+    font-style:normal;
+    font-weight:400;
+    src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
+
+
+:root {
+    --main-color: #FDC745;
+    --white:#ffffff;
+    --pane-padding: 5px 42px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 스크롤탑 버튼 */
+.up_btn {
+    font-size: 40px;
+    position: fixed;
+    right:20px;
+    bottom: 40px;
+    z-index: 99;
+    color:#2b2b2b;
+    text-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+    cursor: pointer;
+  }
+
+
+
+#header {
+    width: 100%;
+    z-index: 999;
+    position: relative;
+    /* position: fixed; */
+    background-color: var(--main-color);
+}
+#header .header_container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+}
+#header .header_container .logo {
+    width: 20%;
+    height: 130px;
+    box-sizing: border-box;
+}
+
+
+#header .header_container .nav {
+    width: 80%;
+    height: 130px;
+}
+
+
+
+.header_container .nav > ul{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.header_container .nav > ul > li{
+    position: relative
+}
+.header_container .nav > ul > li > a{
+    display: block;
+    padding: 56px 25px;
+    /* background-color: #484848; */
+    /* margin-top: 50px; */
+    text-align: center;
+    font-size: 18px;
+    box-sizing: border-box;
+    font-weight: 400;
+    color: var(--white);
+}
+.header_container .nav > ul > li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0px;
+    height: 5px;
+    margin: 5px 0 0;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.3s;
+    opacity: 0;
+    background-color: #cf1313;
+}
+.header_container .nav > ul > li:hover:after {
+    width: 100%;
+    opacity: 1;
+}  
+
+
+/* slider-wrap 메인배너 st */
+.slider-wrap{
+    width: 100%;
+    height: 100%;
+    max-height: 730px;
+    box-sizing: border-box;
+}
+
+
+/* 메인 */
+/* contents */
+#contents{
+    width: 100%;
+    height: inherit;
+}
+
+/* new_arrivals */
+.arrival_list{
+    width: 100%;
+    height: auto;
+    /* background-color: #d1d1d1; */
+    text-align: center;
+    padding: 200px 0 0 0;
+    overflow: hidden;
+}
+
+/* New arrivals */
+.arrival_list .banner_title{
+    font-size: 4rem;
+    font-family:'DNFBitBitv2';
+    color: #DB2227;
+}
+
+/* 그때 그시절 최고의 맛 */
+.arrival_list .banner_subtitle{
+    font-size: 20px;
+    display: block;
+    margin-top: 30px;
+    
+}
+
+/*post slider*/
+.slick_list{
+    max-width: 1400px;
+    height: auto;
+    border: 1px solid #f40909;
+    margin:100px auto;
+}
+.slick_container {
+    width: 100%;
+    height: 680px;
+    border: 1px solid #13c8d9;
+    margin-right: 10px;
+}  
+
+.slick_container .slick_parents{
+    overflow: hidden;
+}
+
+
+.slick_container .slick_child{
+    width: 100%;
+    height: auto;
+}
+
+
+.slick_container img:hover{
+    transform: scale(1.2, 1.2); 
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.slick_container img {
+    transition-duration: 0.3s;
+    display: block;
+}
+
+/* preview, next */
+.slick-arrow {
+    display: none;
+  }
+
+
+/* new_arrival 상품정보 */
+.slick_text{
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+.slick_text p{
+    font-size: 20px;
+    color: #DB2227;
+    font-weight: 800;
+    text-align: left;
+    padding: 10px;
+    text-decoration: underline;
+
+    
+}
+.slick_text h2{
+    font-size: 28px;
+    color: #000;
+    padding: 5px 10px;
+    margin-top: 5px;
+    display: block;
+    text-align: left;
+
+}
+/* 가격 */
+.slick_text span{
+    font-size: 26px;
+    color: #6f6f6f;
+    text-align: right;
+    display: block;
+    padding: 5px;
+}
+
+/* shop_now */
+.slick_text .shop_button{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    right: 3px;
+    border-radius: 10px;
+    border: 2px solid #fdc745;
+    font-size: 20px;
+}
+.slick_text .shop_button:hover{
+    background-color: #fdc745;
+    color: #fff;
+}
+
+/* brands */
+
+.brands_list{
+    width: 100%;
+    /* height: auto; */
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 100px;
+}
+/* brand - 메인 타이틀 */
+.brands_list .banner_title{
+    font-size: 4rem;
+    font-family:'DNFBitBitv2';
+    color: #DB2227;
+}
+
+/* brand - 서브타이틀 */
+.brands_list .banner_subtitle{
+    font-size: 20px;
+    display: block;
+    margin-top: 30px;
+}
+
+.brand_container{
+    height: 570px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(2, 1fr);
+    gap:30px;
+    padding: 0 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.brand_container > .brand_item:first-child{
+    height: 570px;
+    background-image: url(../images/brand01.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column:1/2;
+    grid-row:span 2;
+    border-radius: 0;
+}
+.brand_container .brand_item{
+    height: 270px;
+    background-color: #fdc745;
+    border-radius: 0px 50px 0px 50px;
+}
+.brand_container > .brand_item:nth-child(2){
+    background-image: url(../images/brand02.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.brand_container > .brand_item:nth-child(3){
+    background-image: url(../images/brand02.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.brand_container > .brand_item:nth-child(4){
+    background-image: url(../images/brand02.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.brand_container > .brand_item:nth-child(5){
+    background-image: url(../images/brand02.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* 유튜브 */
+.banner_video{
+    width: 1400px;
+    height: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* .business */
+.business_wrap{
+    width: 100%;
+    /* height: auto; */
+    text-align: center;
+    padding: 100px 0;
+    margin:100px 0;
+    margin-top: 300px;
+}
+.business_wrap .banner_title{
+    font-size: 4rem;
+    font-family:'DNFBitBitv2';
+    color: #DB2227;
+}
+
+/* .business - 서브타이틀 */
+.business_wrap .banner_subtitle{
+    font-size: 20px;
+    display: block;
+    margin-top: 30px;
+}
+
+.business_container{
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    border: 20px;
+    margin: 100px auto;
+}
+.content_wrap{
+    width: 350px;
+    height: 450px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content_wrap:hover {
+    box-shadow: 3px 3px 10px 10px rgba(0, 0, 0, 0.3);
+ }
+
+
+.content_wrap .img_box{
+    width: 100%;
+    height: 200px;
+    background-color: #fdc745; 
+}
+.content_wrap .txt_box{
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding: 5px 15px 7px 15px;
+    margin-top: 15px;
+
+}
+.content_wrap .txt_box h3{
+    font-size: 32px;
+    font-weight: bold;
+}
+.content_wrap .txt_box h4{
+    font-size: 16px;
+    color: #6f6f6f;
+}
+
+.content_wrap .txt_box a{
+    display: block;
+    text-decoration: none;
+    text-align: right;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+.content_wrap .txt_box i{
+    font-size: 14px;
+}
+
+
+/* special edition */
+.edition_wrap{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 100px 0;
+    margin:150px 0;
+
+}
+
+  /* 에디션 */
+
+.edition_wrap .banner_title{
+    font-size: 4rem;
+    font-family:'DNFBitBitv2';
+    color: #DB2227;
+}
+/* .edition - 서브타이틀 */
+.edition_wrap .banner_subtitle{
+    font-size: 20px;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+
+.edition_container .contents_wrap{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 5px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+    
+}
+
+.contents_wrap div{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+.edition_wrap .contents_wrap img{
+    width: 300px;
+    height: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition-duration: 0.6s;
+
+}
+
+.contents_wrap img:hover{
+    transform: scale(1.2, 1.2); 
+    transition-duration: 0.5s;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+
+
+
+/* footer */
+.footer {
+    width: 100%;
+    height: 500px;
+    background-color: #eee;
+
+}
+
+.footer .footer_inner{
+    position: relative;
+    height: 500px;
+}
+
+.footer_img img{
+    width: 550px;
+    height: 500px;
+    position: absolute;
+    right: 80px;
+    top: 8px;
+}
+.footer_inner .footer_logo_menu{
+    position: absolute;
+    right: 140px;
+    bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    color: #fff;
+}
+
+.footer_menu{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10px;
+    letter-spacing: 0.8px;
+}
+.footer_logo_menu span{
+    font-size: 18px;
+}
+
+.footer_menu .menu_box{
+    display: flex;
+    position: relative;
+}
+
+.footer_menu .menu_box li{
+    position: relative;
+    padding-right:30px;
+    
+}
+
+
+.footer_menu .menu_box li a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu_box li::before{
+    content: "";
+    display: block;
+    width: 2px;
+    height: 18px;
+    background-color: #2a2a2a;
+    position: absolute;
+    top: calc(50% - 6px);
+    left: -10px;
+}
+
+.menu_box li:first-child::before{
+    display: none;
+}
+
+/* .footer_menu .menu_box li a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 18px;
+    background-color: #DB2227;
+    padding: 1px;
+    right: 15px;
+    bottom: 3px;
+} */
+
+
+
+.footer_menu .icon_menu{
+    display: flex;
+}
+.footer_menu .icon_menu li a{
+    padding-left: 40px;
+}
+
+
+.footer_menu .icon_menu li i{
+    font-size: 1.4rem;
+    line-height: 1.75rem;
+}
