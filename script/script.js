@@ -2,6 +2,9 @@ $(function(){
   var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
+    slidesPerView: 'auto',
+    observer: true,
+    observeParents: true,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
@@ -14,7 +17,7 @@ $(function(){
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    slidesPerView: 'auto',
+    
   });
   
   
