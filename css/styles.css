@@ -165,6 +165,7 @@ img{
     height: auto;
     /* border: 1px solid #f40909; */
     margin:100px auto;
+    display: flex;
 }
 .slick_container {
     width: 100%;
