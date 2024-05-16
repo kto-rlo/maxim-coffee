@@ -28,7 +28,7 @@ $(function(){
   autoplay: true,
   autoplaySpeed: 2000,
   slide: 'div',		//슬라이드 되어야 할 태그 ex) div, li 
-  infinite : true, 	//무한 반복 옵션s
+  infinite : true, 	//무한 반복 옵션
   draggable : true, 	//드래그 가능 여부 
   arrows : false,
   responsive: [ // 반응형 웹 구현 옵션
