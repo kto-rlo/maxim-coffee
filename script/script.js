@@ -23,32 +23,32 @@ $(function(){
   
   // slick
   
-  $('.slick_list').slick({
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  slide: 'div',		//슬라이드 되어야 할 태그 ex) div, li 
-  infinite : true, 	//무한 반복 옵션
-  draggable : true, 	//드래그 가능 여부 
-  arrows : false,
-  responsive: [ // 반응형 웹 구현 옵션
-      {  
-          breakpoint: 960, //화면 사이즈 960px
-          settings: {
-              //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-              slidesToShow:3 
-          } 
-      },
-      { 
-          breakpoint: 768, //화면 사이즈 768px
-          settings: {	
-              //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-              slidesToShow:2 
-          } 
-      }
-  ]
-  });
+  // $('.slick_list').slick({
+  // slidesToShow: 4,
+  // slidesToScroll: 1,
+  // autoplay: true,
+  // autoplaySpeed: 2000,
+  // slide: 'div',		//슬라이드 되어야 할 태그 ex) div, li 
+  // infinite : true, 	//무한 반복 옵션
+  // draggable : true, 	//드래그 가능 여부 
+  // arrows : false,
+  // responsive: [ // 반응형 웹 구현 옵션
+  //     {  
+  //         breakpoint: 960, //화면 사이즈 960px
+  //         settings: {
+  //             //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+  //             slidesToShow:3 
+  //         } 
+  //     },
+  //     { 
+  //         breakpoint: 768, //화면 사이즈 768px
+  //         settings: {	
+  //             //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+  //             slidesToShow:2 
+  //         } 
+  //     }
+  // ]
+  // });
   
   
   
